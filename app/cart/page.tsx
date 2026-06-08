@@ -155,7 +155,7 @@ export default function CartList() {
     <div className="min-h-screen bg-neutral-50 text-neutral-800 antialiased py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-2xl font-bold tracking-tight text-neutral-900 mb-8 border-b border-neutral-200 pb-4">
-          Shopping Cart
+          お野菜ボックス
         </h1>
 
         <div className="bg-white rounded-xl border border-neutral-100 shadow-sm overflow-hidden mb-8">
