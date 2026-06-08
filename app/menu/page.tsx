@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react";
-import {use, useState} from "react";
+import {useState} from "react";
 import {useEffect} from "react";
 import {useRouter} from "next/navigation";
 
@@ -42,6 +42,7 @@ export default function MenuList() {
             }catch(error){
                 console.log("通信失敗", error);
                 return;
+                
             }
 
 
@@ -124,10 +125,20 @@ export default function MenuList() {
                                 key={menu?.id} 
                                 className="group bg-white rounded-xl overflow-hidden border border-neutral-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col"
                             >
-                                <div className="aspect-square bg-neutral-100 relative overflow-hidden flex items-center justify-center text-neutral-300 group-hover:scale-105 transition-transform duration-300">
-                                    <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                    </svg>
+                                <div className="aspect-square bg-neutral-100 relative overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                                    <img
+                                        src={
+                                                　menu?.id === 1
+                                                ? "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgNtUR1ksjXGJrJuKvasxsxzXsmHg19Sijij3bYh-ad9Zlyt__d2uGbMOkx06LR55mYWc270w5WBssx5lYz6qd21RT4mDJLy9ppwDNkxI19xhPMWsTwarzDSSADvK8N1zPf9txO0WmF8NOL/s400/fruit_banana_character.png"
+                                                : menu?.id === 2
+                                                ? "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg4XgoY3TV5K-XWwDBGigF8g4j410bWlgXZiB8pW2ooY7SvGwcgiGBR2pH2Wk9qNiB-Hnz6rsN246p3qSXhwryrVpK_9HUcwzQaT37LtVPgDUBwlg2B3Xq8aDoRw4c_eA_ttQYEylVdqx_d/s400/character_apple.png"
+                                                : menu?.id === 3
+                                                ? "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipfSiHWnrcxKv8voU7A9VO7vTQA5ILTOrR_V4q2ZIYZQKC_AAjbVvDhDXY225_Pu5mYM3f2GveXfixjmNBFW0QrUDDfJoPaaOqEW0Ori8m2TzgXMnNs_f6BQ-Yfb7oW_tuGL4Rz4A6arRY/s400/character_pineapple.png"
+                                                : "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgNtUR1ksjXGJrJuKvasxsxzXsmHg19Sijij3bYh-ad9Zlyt__d2uGbMOkx06LR55mYWc270w5WBssx5lYz6qd21RT4mDJLy9ppwDNkxI19xhPMWsTwarzDSSADvK8N1zPf9txO0WmF8NOL/s400/fruit_banana_character.png" 
+                                        }
+                                        alt={menu?.commodityName}
+                                        className="w-full h-full object-contain p-4"
+                                    />
                                 </div>
 
                                 <div className="p-5 flex flex-col flex-grow">
